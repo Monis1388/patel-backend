@@ -1,0 +1,10 @@
+node_modules/
+.env
+.env.*
+uploads/*
+fix-admin.js
+check_*.js
+test_*.js
+server_*.txt
+out*.txt
+output*.txt
