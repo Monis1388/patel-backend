@@ -50,6 +50,7 @@ const categoryRoutes = require('./routes/categoryRoutes');
 const contactRoutes = require('./routes/contactRoutes');
 const aiRoutes = require('./routes/aiRoutes');
 const lensRoutes = require('./routes/lensRoutes');
+const reviewRoutes = require('./routes/reviewRoutes');
 
 app.use('/api/users', authRoutes);
 app.use('/api/products', cacheMiddleware(3600), productRoutes);
@@ -60,6 +61,7 @@ app.use('/api/categories', cacheMiddleware(3600), categoryRoutes);
 app.use('/api/contact', contactRoutes);
 app.use('/api/ai', aiRoutes);
 app.use('/api/lenses', lensRoutes);
+app.use('/api/reviews', reviewRoutes);
 app.use('/uploads', express.static(require('path').join(__dirname, 'uploads')));
 
 app.get('/', (req, res) => {
